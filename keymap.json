@@ -2,33 +2,7 @@
   {
     "bindings": {
       "ctrl-w": "pane::CloseActiveItem",
-    },
-  },
-  {
-    "context": "Terminal",
-    "bindings": {
       "alt-l": "workspace::ToggleRightDock",
-      "alt-a": "workspace::ToggleBottomDock",
-    },
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "ctrl-l": "agent::ToggleFocus",
-      "alt-l": "workspace::ToggleRightDock",
-      "alt-a": "workspace::ToggleBottomDock",
-    },
-  },
-  {
-    "context": "!Terminal && !(Editor && (vim_mode == insert || vim_mode == visual))",
-    "bindings": {
-      "s h": "workspace::ActivatePaneLeft",
-      "s l": "workspace::ActivatePaneRight",
-      "s k": "workspace::ActivatePaneUp",
-      "s j": "workspace::ActivatePaneDown",
-      "space x": "workspace::CloseActiveDock",
-      "alt-l": "workspace::ToggleRightDock",
-      "ctrl-l": "workspace::ToggleBottomDock",
     },
   },
   {
@@ -47,22 +21,21 @@
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
+      "space x": "workspace::CloseActiveDock",
       "space shift-o": "projects::OpenRecent",
-      "s s": "pane::SplitHorizontal",
-      "s v": "pane::SplitVertical",
       "s h": "workspace::ActivatePaneLeft",
       "s l": "workspace::ActivatePaneRight",
       "s k": "workspace::ActivatePaneUp",
       "s j": "workspace::ActivatePaneDown",
+      "s s": "pane::SplitHorizontal",
+      "s v": "pane::SplitVertical",
       "z j": ["workspace::SendKeystrokes", "z t"],
       "z k": ["workspace::SendKeystrokes", "z b"],
       "g a": "editor::ToggleCodeActions",
-      "s shift-l": "editor::MoveRight",
       "alt-l": "workspace::ToggleRightDock",
       "ctrl-j": ["workspace::SendKeystrokes", "j _"],
       "ctrl-k": ["workspace::SendKeystrokes", "k _"],
       "space space": ["workspace::SendKeystrokes", "ctrl-^"],
-      "space x": "pane::CloseActiveItem",
       "space e": "project_panel::ToggleFocus",
       "space q": "pane::CloseActiveItem",
       "space c o": "pane::CloseOtherItems",
